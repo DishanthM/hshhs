@@ -1,0 +1,839 @@
+:root {
+    --spine-pyramid: linear-gradient(
+      315deg,
+      transparent 75%,
+      rgba(255, 255, 255, 0.1) 0
+      ),
+      linear-gradient(
+        45deg,
+         transparent 75%,
+          rgba(255, 255, 255, 0.1) 0
+      ),
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.2) 166px,
+        transparent 0
+      ),
+      linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.1) 75%,
+        transparent 0
+      );
+      background-size: 20px 20px;
+    --spine-stairs: repeating-linear-gradient(
+        63deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 3px,
+        transparent 0
+      ),
+      linear-gradient(
+        127deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 90px,
+        transparent 55%,
+        transparent 0
+      ),
+      linear-gradient(
+        transparent 51%,
+        rgba(0, 0, 0, 0.1) 170px
+      );
+      background-size: 70px 120px;
+    --spine-argyle: repeating-linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px,
+        transparent 60px
+      ),
+      repeating-linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px,
+        transparent 60px
+      ),
+      linear-gradient(
+        60deg,
+        rgba(0, 0, 0, 0.1) 25%,
+        transparent 25%,
+        transparent 75%,
+        rgba(0, 0, 0, 0.1) 75%,
+        rgba(0, 0, 0, 0.1)
+      ),
+      linear-gradient(
+        120deg,
+        rgba(0, 0, 0, 0.1) 25%,
+        transparent 25%,
+        transparent 75%,
+        rgba(0, 0, 0, 0.1) 75%,
+        rgba(0, 0, 0, 0.1)
+      );
+    background-size: 70px 120px;
+    --spine-tartan: repeating-linear-gradient(
+        transparent,
+        transparent 50px,
+        rgba(0, 0, 0, 0.4) 50px,
+        rgba(0, 0, 0, 0.4) 53px,
+        transparent 53px,
+        transparent 63px,
+        rgba(0, 0, 0, 0.4) 63px,
+        rgba(0, 0, 0, 0.4) 66px,
+        transparent 66px,
+        transparent 116px,
+        rgba(0, 0, 0, 0.5) 116px,
+        rgba(0, 0, 0, 0.5) 166px,
+        rgba(255, 255, 255, 0.2) 166px,
+        rgba(255, 255, 255, 0.2) 169px,
+        rgba(0, 0, 0, 0.5) 169px,
+        rgba(0, 0, 0, 0.5) 179px,
+        rgba(255, 255, 255, 0.2) 179px,
+        rgba(255, 255, 255, 0.2) 182px,
+        rgba(0, 0, 0, 0.5) 182px,
+        rgba(0, 0, 0, 0.5) 232px,
+        transparent 232px
+      ),
+      repeating-linear-gradient(
+        270deg,
+        transparent,
+        transparent 50px,
+        rgba(0, 0, 0, 0.4) 50px,
+        rgba(0, 0, 0, 0.4) 53px,
+        transparent 53px,
+        transparent 63px,
+        rgba(0, 0, 0, 0.4) 63px,
+        rgba(0, 0, 0, 0.4) 66px,
+        transparent 66px,
+        transparent 116px,
+        rgba(0, 0, 0, 0.5) 116px,
+        rgba(0, 0, 0, 0.5) 166px,
+        rgba(255, 255, 255, 0.2) 166px,
+        rgba(255, 255, 255, 0.2) 169px,
+        rgba(0, 0, 0, 0.5) 169px,
+        rgba(0, 0, 0, 0.5) 179px,
+        rgba(255, 255, 255, 0.2) 179px,
+        rgba(255, 255, 255, 0.2) 182px,
+        rgba(0, 0, 0, 0.5) 182px,
+        rgba(0, 0, 0, 0.5) 232px,
+        transparent 232px
+      ),
+      repeating-linear-gradient(
+        125deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.2) 2px,
+        rgba(0, 0, 0, 0.2) 3px,
+        transparent 3px,
+        transparent 5px,
+        rgba(0, 0, 0, 0.2) 5px
+      );
+  }
+  
+  .bookshelf {
+    width: 100%;
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .book {
+    width: 50px;
+    height: 280px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(0) rotateY(0);
+    transition: transform 1s;
+  }
+  
+  .side {
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    transform-origin: center left;
+  }
+  
+  .spine {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/hp1.jpg);
+    background-size: calc(34px);
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  
+  .spine-title {
+    margin: 2px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 12px;
+    color: gold;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+  
+  .spine-author {
+    position: absolute;
+    color: goldenrod;
+    bottom: 0px;
+    left: 20%; 
+  }
+  
+  .top {
+    width: 30px;
+    height: 190px;
+    top: -2px;  /* hmm, why -2 and not 0? */
+    background-image: linear-gradient(90deg, white 90%, gray 10%);
+    background-size: 5px 5px;
+    transform: rotateX(90deg) translateZ(95px) translateY(-95px);
+  }
+  
+  .cover {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/hp1c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  
+  .book:hover {
+    z-index: 1;
+    transform: rotateX(-25deg) rotateY(-40deg) rotateZ(-15deg) translateY(50px)
+      translateX(-30px);
+  }
+  .spine2 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/hp2.jpg);
+    background-size: calc(34px);
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover2 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/hp2c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine3 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/hp3.jpg);
+    background-size:34px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover3 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/hp3c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine4 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/hp4.jpg);
+    background-size: 40px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover4 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/hp4c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine5 {
+    position: relative;
+    width: 50px;
+    height: 280px;
+    background-image: url(img/hp5.jpg);
+    background-size: 50px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover5 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/hp5c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 50px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .top5 {
+    width: 50px;
+    height: 190px;
+    top: -2px;  /* hmm, why -2 and not 0? */
+    background-image: linear-gradient(90deg, white 90%, gray 10%);
+    background-size: 5px 5px;
+    transform: rotateX(90deg) translateZ(95px) translateY(-95px);
+  }
+  .spine6 {
+    position: relative;
+    width: 50px;
+    height: 280px;
+    background-image: url(img/hp6.jpg);
+    background-size: 50px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover6 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/hp6c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 50px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine7 {
+    position: relative;
+    width: 50px;
+    height: 280px;
+    background-image: url(img/hp7.jpg);
+    background-size: 50px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover7 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/hp7c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 50px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine8 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/tm1.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover8 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/tm1c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .top8 {
+    width: 30px;
+    height: 190px;
+    top: -2px;  /* hmm, why -2 and not 0? */
+    background-image: linear-gradient(90deg, white 90%, gray 10%);
+    background-size: 5px 5px;
+    transform: rotateX(90deg) translateZ(95px) translateY(-95px);
+  }
+  .spine9 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/tm2.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover9 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/tm2c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine10 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/tm3.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover10 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/tm3c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine11 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/tm4.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover11 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/tm4c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine12 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/tm6.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover12 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/tm6c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine13 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/tm7.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover13 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/tm7c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine14 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/wk1.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover14 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/wk1c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine15 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/wk2.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover15 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/wk2c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine16 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/wk3.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover16 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/wk3c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine17 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/wk4.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover17 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/wk4c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine18 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/wk5.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover18 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/wk5c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine19 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/wk6.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover19 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/wk6c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine20 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/wk7.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover20 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/wk7c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine21 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/wk8.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover21 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/wk8c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine22 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/wk9.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover22 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/wk9c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine23 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/wk10.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover23 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/wk10c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine24 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/guasu.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover24 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/war.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine25 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/dndnd.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover25 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/🏝\ island.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine26 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/hdhd.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover26 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/grandddddddddddd.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine27 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/🎲\ dice.jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover27 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/bdhs.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine28 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/✈plane\ .jpg);
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover28 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/🚍\ bus.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine29 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/wk11.jpg );
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover29 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/wk11c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine30 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/wk12.jpg );
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover30 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/wk12c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  .spine31 {
+    position: relative;
+    width: 30px;
+    height: 280px;
+    background-image: url(img/wk13.jpg );
+    background-size: 30px 280px;
+    background-repeat: no-repeat;
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  .cover31 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url(img/wk13c.jpg);
+    background-size: contain;
+    background-repeat: round;
+    left: 30px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

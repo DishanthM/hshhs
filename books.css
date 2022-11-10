@@ -1,0 +1,183 @@
+*{
+    font-family: island Moments;
+    font-size: xx-large;
+}
+body{
+    background-color: maroon;
+    color: white;
+    color: black;
+    padding: 100px;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: purple;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    background-color:black;
+    position: fixed;
+    top: 150px;
+    bottom: 000px;
+    left: 50px;
+    right: 50px;
+    height: 350px;
+}
+.fiction{
+    margin-top: 50px;
+}
+  .fictionrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fictionimg{
+    position: relative;
+  }
+  .hp1{
+    position: absolute;
+    height:120px;
+    width: 15px;
+    top: 55px;
+    left: 0px;
+  }
+  .hp2{
+    position: absolute;
+    height:120px;
+    width: 20px;
+    top: 55px;
+    left: 15px;
+  }
+  .hp3{
+    position: absolute;
+    width: 20px;
+    height:120px;
+    top: 55px;
+    left: 35px;
+  }
+  .hp4{
+    position: absolute;
+    height:120px;
+    top: 55px;
+    left: 55px;
+  }
+  .hp5{
+    position: absolute;
+    height:120px;
+    top: 55px;
+    left: 78px;
+  }
+  .hp6{
+    position: absolute;
+    height:120px;
+    top: 55px;
+    left: 100px;
+  }
+  .hp7{
+    position: absolute;
+    height:120px;
+    top: 55px;
+    left: 120px;
+    width: 29px;
+  }
+  .n1{
+    position: absolute;
+    height:120px;
+    top: 50px;
+    left: 150px;
+    width: 85px;
+  }
+  .ww1{
+    position: absolute;
+    height:120px;
+    top: 50px;
+    left: 230px;
+    width: 85px;
+  }
+  .comicimg{
+    position: relative;
+  }
+  .tm1{
+    position: absolute;
+    height:120px;
+    width: 15px;
+    top: 0px;
+    left: 0px;
+  }
+  .tm2{
+    position: absolute;
+    height:120px;
+    width: 20px;
+    top: 0px;
+    left: 15px;
+  }
+  .tm3{
+    position: absolute;
+    width: 20px;
+    height:120px;
+    top: 0px;
+    left: 35px;
+  }
+  .tm4{
+    position: absolute;
+    height:120px;
+    top: 0px;
+    left: 55px;
+    width: 25px;
+  }
+  .tm5{
+    position: absolute;
+    height:120px;
+    top: 0px;
+    left: 78px;
+    width: 20px;
+  }
+  .tm6{
+    position: absolute;
+    height:120px;
+    top: 0px;
+    left: 100px;
+    width: 20px;
+  }
+  .tm7{
+    position: absolute;
+    height:120px;
+    top: 0px;
+    left: 120px;
+    width: 27px;
+  }
+  .comicrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .efd{
+   width: 300px;
+   border-radius: 150px;
+   position: fixed;
+   top: 100px;
+   left: 100px;
+   background-color: black;
+  }
+.wimpy{
+  height: 125px;
+  position: absolute;
+  left: 150px;
+}
+.abcd{
+  position: fixed;
+  top: 200px;
+  width: 500px;
+}
